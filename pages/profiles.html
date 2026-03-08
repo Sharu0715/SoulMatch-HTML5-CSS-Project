@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browse Profiles - SoulMatch</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <header class="header">
+        <nav class="nav">
+            <a href="../index.html" class="logo">
+                <span class="logo-icon">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16 28C16 28 4 20 4 12C4 8 7.5 4 12 4C14.5 4 16 6 16 6C16 6 17.5 4 20 4C24.5 4 28 8 28 12C28 20 16 28 16 28Z" fill="currentColor"/>
+                    </svg>
+                </span>
+                SoulMatch
+            </a>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="profiles.html" class="active">Browse Profiles</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="nav-buttons">
+                <a href="login.html" class="btn btn-outline">Log In</a>
+                <a href="register.html" class="btn btn-primary">Register Free</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title">Browse Profiles</h1>
+            <p class="page-subtitle">Find your perfect match from thousands of verified profiles</p>
+        </div>
+    </section>
+
+    <!-- Search Filters -->
+    <section class="search-filters">
+        <div class="container">
+            <form class="filter-form">
+                <div class="filter-group">
+                    <label for="gender">Looking for</label>
+                    <select id="gender" name="gender">
+                        <option value="">Select Gender</option>
+                        <option value="male">Groom</option>
+                        <option value="female">Bride</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="age-from">Age From</label>
+                    <select id="age-from" name="age-from">
+                        <option value="">Min Age</option>
+                        <option value="21">21</option>
+                        <option value="22">22</option>
+                        <option value="23">23</option>
+                        <option value="24">24</option>
+                        <option value="25">25</option>
+                        <option value="26">26</option>
+                        <option value="27">27</option>
+                        <option value="28">28</option>
+                        <option value="29">29</option>
+                        <option value="30">30</option>
+                        <option value="30">31</option>
+                        <option value="30">32</option>
+                        <option value="30">33</option>
+                        <option value="35">34</option>
+                        <option value="30">35</option>
+                        <option value="30">36</option>
+                        <option value="30">37</option>
+                        <option value="30">38</option>
+                        <option value="30">39</option>
+                        <option value="40">40</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="age-to">Age To</label>
+                    <select id="age-to" name="age-to">
+                        <option value="">Max Age</option>
+                        <option value="25">25</option>
+                        <option value="28">28</option>
+                        <option value="30">30</option>
+                        <option value="32">32</option>
+                        <option value="35">35</option>
+                        <option value="40">40</option>
+                        <option value="45">45</option>
+                        <option value="50">50</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="religion">Religion</label>
+                    <select id="religion" name="religion">
+                        <option value="">Any Religion</option>
+                        <option value="hindu">Hindu</option>
+                        <option value="muslim">Muslim</option>
+                        <option value="christian">Christian</option>
+                        <option value="sikh">Sikh</option>
+                        <option value="buddhist">Buddhist</option>
+                        <option value="jain">Jain</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="location">Location</label>
+                    <select id="location" name="location">
+                        <option value="">Any Location</option>
+                        <option value="kolhapur">Kolhapur</option>
+                        <option value="mumbai">Pune</option>
+                        <option value="mumbai">Mumbai</option>
+                        <option value="delhi">Delhi</option>
+                        <option value="bangalore">Bangalore</option>
+                        <option value="chennai">Chennai</option>
+                        <option value="hyderabad">Hyderabad</option>
+                        <option value="kolkata">Kolkata</option>
+                        
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label for="education">Education</label>
+                    <select id="education" name="education">
+                        <option value="">Any Education</option>
+                        <option value="bachelor">Bachelor's Degree</option>
+                        <option value="master">Master's Degree</option>
+                        <option value="phd">PhD</option>
+                        <option value="mbbs">MBBS</option>
+                        <option value="diploma">Diploma</option>
+                        <option value="iti">ITI</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary">Search</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Profiles Grid -->
+    <section class="profiles-section">
+        <div class="container">
+            <div class="profiles-header">
+                <p class="results-count">Showing 12 of 1,234 profiles</p>
+                <div class="sort-options">
+                    <label for="sort">Sort by:</label>
+                    <select id="sort" name="sort">
+                        <option value="newest">Newest First</option>
+                        <option value="relevance">Most Relevant</option>
+                        <option value="age-asc">Age: Low to High</option>
+                        <option value="age-desc">Age: High to Low</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="profiles-grid">
+                <div class="profile-card">
+                    <div class="profile-image">
+                        <img src="image/women_profile.png" alt="Profile photo">
+                        <span class="profile-badge verified">Verified</span>
+                    </div>
+                    <div class="profile-info">
+                        <h3 class="profile-name">Priya Kamble</h3>
+                        <p class="profile-details">28 years, 5'4" | Mumbai</p>
+                        <p class="profile-profession">Software Engineer at TCS</p>
+                        <p class="profile-education">B.Tech, Computer Science</p>
+                        <p class="profile-religion">Buddhist</p>
+                        <div class="profile-actions">
+                            <a href="#" class="btn btn-sm btn-outline">View Profile</a>
+                            <a href="#" class="btn btn-sm btn-primary">Send Interest</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="profile-card">
+                    <div class="profile-image">
+                        <img src="image/man_profile.png" alt="Profile photo">
+                        <span class="profile-badge verified">Verified</span>
+                    </div>
+                    <div class="profile-info">
+                        <h3 class="profile-name">Rahul Jain</h3>
+                        <p class="profile-details">30 years, 5'10" | Delhi</p>
+                        <p class="profile-profession">Doctor at AIIMS</p>
+                        <p class="profile-education">MBBS, MD</p>
+                        <p class="profile-religion">Jain</p>
+                        <div class="profile-actions">
+                            <a href="#" class="btn btn-sm btn-outline">View Profile</a>
+                            <a href="#" class="btn btn-sm btn-primary">Send Interest</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="profile-card">
+                    <div class="profile-image">
+                        <img src="image/women_profile.png" alt="Profile photo">
+                        <span class="profile-badge verified">Verified</span>
+                    </div>
+                    <div class="profile-info">
+                        <h3 class="profile-name">Ananya Joshi</h3>
+                        <p class="profile-details">26 years, 5'5" | Bangalore</p>
+                        <p class="profile-profession">Marketing Manager at Google</p>
+                        <p class="profile-education">MBA, Marketing</p>
+                        <p class="profile-religion">Hindu</p>
+                        <div class="profile-actions">
+                            <a href="#" class="btn btn-sm btn-outline">View Profile</a>
+                            <a href="#" class="btn btn-sm btn-primary">Send Interest</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="profile-card">
+                    <div class="profile-image">
+                        <img src="image/man_profile.png" alt="Profile photo">
+                        <span class="profile-badge verified">Verified</span>
+                    </div>
+                    <div class="profile-info">
+                        <h3 class="profile-name">Soheb Attar</h3>
+                        <p class="profile-details">32 years, 5'11" | Hyderabad</p>
+                        <p class="profile-profession">Teacher</p>
+                        <p class="profile-education">BEBed</p>
+                        <p class="profile-religion">Muslim </p>
+                        <div class="profile-actions">
+                            <a href="#" class="btn btn-sm btn-outline">View Profile</a>
+                            <a href="#" class="btn btn-sm btn-primary">Send Interest</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="profile-card">
+                    <div class="profile-image">
+                        <img src="image/women_profile.png" alt="Profile photo">
+                        <span class="profile-badge verified">Verified</span>
+                    </div>
+                    <div class="profile-info">
+                        <h3 class="profile-name">Neha Singh</h3>
+                        <p class="profile-details">27 years, 5'3" | Pune</p>
+                        <p class="profile-profession">Architect at L&T</p>
+                        <p class="profile-education">B.Arch, Architecture</p>
+                        <p class="profile-religion">Hindu</p>
+                        <div class="profile-actions">
+                            <a href="#" class="btn btn-sm btn-outline">View Profile</a>
+                            <a href="#" class="btn btn-sm btn-primary">Send Interest</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="profile-card">
+                    <div class="profile-image">
+                        <img src="image/man_profile.png" alt="Profile photo">
+                        <span class="profile-badge verified">Verified</span>
+                    </div>
+                    <div class="profile-info">
+                        <h3 class="profile-name">Vikram Mehta</h3>
+                        <p class="profile-details">29 years, 5'9" | Chennai</p>
+                        <p class="profile-profession">CA at Deloitte</p>
+                        <p class="profile-education">CA, B.Com</p>
+                        <p class="profile-religion">Buddhist</p>
+                        <div class="profile-actions">
+                            <a href="#" class="btn btn-sm btn-outline">View Profile</a>
+                            <a href="#" class="btn btn-sm btn-primary">Send Interest</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="profile-card">
+                    <div class="profile-image">
+                        <img src="image/women_profile.png" alt="Profile photo">
+                        <span class="profile-badge verified">Verified</span>
+                    </div>
+                    <div class="profile-info">
+                        <h3 class="profile-name">Aisha Khan</h3>
+                        <p class="profile-details">25 years, 5'6" | Mumbai</p>
+                        <p class="profile-profession">Fashion Designer</p>
+                        <p class="profile-education">B.Des, Fashion</p>
+                        <p class="profile-religion">Muslim</p>
+                        <div class="profile-actions">
+                            <a href="#" class="btn btn-sm btn-outline">View Profile</a>
+                            <a href="#" class="btn btn-sm btn-primary">Send Interest</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="profile-card">
+                    <div class="profile-image">
+                        <img src="image/man_profile.png" alt="Profile photo">
+                        <span class="profile-badge verified">Verified</span>
+                    </div>
+                    <div class="profile-info">
+                        <h3 class="profile-name">David Thomas</h3>
+                        <p class="profile-details">31 years, 6'0" | Bangalore</p>
+                        <p class="profile-profession">Product Manager at Amazon</p>
+                        <p class="profile-education">MBA, IIM</p>
+                        <p class="profile-religion">Christian</p>
+                        <div class="profile-actions">
+                            <a href="#" class="btn btn-sm btn-outline">View Profile</a>
+                            <a href="#" class="btn btn-sm btn-primary">Send Interest</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+           
+
+           
+
+
+            <!-- Pagination -->
+            <div class="pagination">
+                <a href="#" class="page-link disabled">Previous</a>
+                <a href="#" class="page-link active">1</a>
+                <a href="#" class="page-link">2</a>
+                <a href="#" class="page-link">3</a>
+                <a href="#" class="page-link">4</a>
+                <a href="#" class="page-link">5</a>
+                <span class="page-dots">...</span>
+                <a href="#" class="page-link">50</a>
+                <a href="#" class="page-link">Next</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="../index.html" class="logo">
+                        <span class="logo-icon">
+                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M16 28C16 28 4 20 4 12C4 8 7.5 4 12 4C14.5 4 16 6 16 6C16 6 17.5 4 20 4C24.5 4 28 8 28 12C28 20 16 28 16 28Z" fill="currentColor"/>
+                            </svg>
+                        </span>
+                        SoulMatch
+                    </a>
+                    <p class="footer-description">Helping people find meaningful connections and lasting relationships since 2010.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="profiles.html">Browse Profiles</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Safety Tips</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact Us</h4>
+                    <p>Email: contact@soulmatch.com</p>
+                    <p>Phone: +91 98765 43210</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 SoulMatch. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
