@@ -13,4 +13,4 @@ A responsive matrimony website which name is the SoulMatch built using HTML and 
 - CSS3
 
 ## Live Demo
-https://username.github.io/matrimony-website/
+https://sharu0715.github.io/SoulMatch-HTML5-CSS-Project/
